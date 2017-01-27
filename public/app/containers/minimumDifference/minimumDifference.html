@@ -1,0 +1,12 @@
+<h2>Find Minimum Difference</h2>
+<br />
+
+<form ng-submit="minDiff.calculate()">
+  <div class="form-group">
+    <label for="input">Space delimited list of integers:</label>
+    <input class="form-control" name="input" ng-model="minDiff.input" ng-change="minDiff.calculate()" autofocus/>
+  </div>
+</form>
+
+<h3 ng-show="minDiff.answer">Minimum Difference</h3>
+<div class="answer">{{minDiff.answer}}</div>
