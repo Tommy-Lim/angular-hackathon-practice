@@ -35,6 +35,10 @@ angular.module('App', ['ui.router'])
       url: '/mergeTwoSorted',
       component: 'mergeTwoSortedComp'
     })
+    .state('minimumDifferenceState', {
+      url: '/minimumDifference',
+      component: 'minimumDifferenceComp'
+    })
     .state('reverseStrState', {
       url: '/reverseStr',
       component: 'reverseStrComp'

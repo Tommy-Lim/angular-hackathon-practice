@@ -33,6 +33,7 @@ function DataServices(){
       "smallestInt",
       "factorialize",
       "mergeTwoSorted",
+      "minimumDifference",
       "reverseStr",
       "calculator",
       "reverseOrder",
