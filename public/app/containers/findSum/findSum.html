@@ -10,3 +10,24 @@
 
 <h3 ng-show="findSumComp.sum">Sum:</h3>
 <div class="answer">{{findSumComp.sum}}</div>
+
+<hr />
+
+<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#codeContent" aria-expanded="false" aria-controls="codeContent">
+  Show Code
+</button>
+<div class="collapse" id="codeContent">
+  <div class="well code-content">
+    <code>
+      <xmp>
+    function addAll(array){
+      var sum = null;
+      for (i = 0; i < array.length; i++){
+        sum = sum + array[i];
+      }
+      return sum;
+    };
+      </xmp>
+    </code>
+  </div>
+</div>
