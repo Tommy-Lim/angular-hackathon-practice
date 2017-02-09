@@ -8,6 +8,8 @@ angular.module('App')
 function NavbarCompCtrl(DataServices){
   var navbarComp = this;
 
+  console.log("Welcome to Wolfram|Beta!")
+
   navbarComp.functions = DataServices.arrayOfFunctions();
 }
 

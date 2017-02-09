@@ -11,14 +11,11 @@ function SidenavCompCtrl($rootScope, $state, $stateParams, DataServices){
   $rootScope.$state = $state;
   $rootScope.$stateParams = $stateParams;
 
-  console.log("state:", $rootScope.$state.current.name);
 
   sidenavComp.isHome = function(){
     if($rootScope.$state.current.name == 'homeState'){
-      console.log("true");
       return true;
     } else{
-      console.log("false");
       return false;
     }
   }
