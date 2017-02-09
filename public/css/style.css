@@ -26,3 +26,19 @@ body{
 .btn.disabled, .btn.disabled:hover{
   background-color: lightgrey;
 }
+
+xmp, code{
+  margin: 0;
+  padding: 0;
+  overflow-x: scroll;
+}
+
+.code-content{
+  margin-top: 10px;
+  padding: 2px;
+  overflow-x: scroll;
+}
+
+#codeContent{
+  overflow-x: scroll;
+}

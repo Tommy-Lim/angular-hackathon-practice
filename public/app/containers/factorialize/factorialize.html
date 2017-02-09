@@ -10,3 +10,33 @@
 
 <h3 ng-show="factorializeComp.sum">Product:</h3>
 <div class="answer">{{factorializeComp.sum}}</div>
+
+<hr />
+
+<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#codeContent" aria-expanded="false" aria-controls="codeContent">
+  Show Code
+</button>
+<div class="collapse" id="codeContent">
+  <div class="well code-content">
+    <code>
+      <xmp>
+  function factorialize(num) {
+    var array = [];
+    if(num === 0){
+        return 0;
+    } else if(num === 1){
+       return 1;
+    }
+    for (i = 0; i < num; i){
+        array.push(num);
+        num--;
+    }
+    sum = array.reduce(function(previousVal, currentVal){
+        return previousVal * currentVal;
+    });
+    return sum;
+  };
+      </xmp>
+    </code>
+  </div>
+</div>
