@@ -14,3 +14,42 @@
 
 <h3 ng-show="mergeTwoSortedComp.answer">Merged, sorted array:</h3>
 <div class="answer">{{mergeTwoSortedComp.answer}}</div>
+
+<hr />
+
+<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#codeContent" aria-expanded="false" aria-controls="codeContent">
+  Show Code
+</button>
+<div class="collapse" id="codeContent">
+  <div class="well code-content">
+    <code>
+      <xmp>
+    function mergeTwoSorted(a1, a2) {
+      var i1 = 0;
+      var i2 = 0;
+      var results = [];
+
+      while (i1 < a1.length && i2 < a2.length) {
+        if (a1[i1] < a2[i2]) {
+          results.push(a1[i1]);
+          i1++;
+        } else {
+          results.push(a2[i2]);
+          i2++;
+        }
+      }
+      while (i1 < a1.length) {
+        results.push(a1[i1]);
+        i1++;
+      }
+      while (i2 < a2.length) {
+        results.push(a2[i2]);
+        i2++;
+      }
+
+      return "["+results.join(", ")+"]";
+    }
+      </xmp>
+    </code>
+  </div>
+</div>

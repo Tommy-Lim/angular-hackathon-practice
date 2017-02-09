@@ -10,3 +10,21 @@
 
 <h3 ng-show="reverseStrComp.str">Reversed string:</h3>
 <div class="answer">{{reverseStrComp.str}}</div>
+
+<hr />
+
+<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#codeContent" aria-expanded="false" aria-controls="codeContent">
+  Show Code
+</button>
+<div class="collapse" id="codeContent">
+  <div class="well code-content">
+    <code>
+      <xmp>
+    function reverseStr(str) {
+      var str = str.split('').reverse().join('');
+      return str;
+    };
+      </xmp>
+    </code>
+  </div>
+</div>

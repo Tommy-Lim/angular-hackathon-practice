@@ -10,3 +10,23 @@
 
 <h3 ng-show="sortComp.answer">Sorted List:</h3>
 <div class="answer">{{sortComp.answer}}</div>
+
+<hr />
+
+<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#codeContent" aria-expanded="false" aria-controls="codeContent">
+  Show Code
+</button>
+<div class="collapse" id="codeContent">
+  <div class="well code-content">
+    <code>
+      <xmp>
+    function sort(str){
+       str = str.split(" ");
+       str = str.sort();
+       str = str.join(" ");
+       return str;
+    };
+      </xmp>
+    </code>
+  </div>
+</div>

@@ -10,3 +10,26 @@
 
 <h3 ng-show="largestIntComp.sum">Largest integer:</h3>
 <div class="answer">{{largestIntComp.sum}}</div>
+
+<hr />
+
+<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#codeContent" aria-expanded="false" aria-controls="codeContent">
+  Show Code
+</button>
+<div class="collapse" id="codeContent">
+  <div class="well code-content">
+    <code>
+      <xmp>
+    function largestInt(array){
+      var largest = array[0];
+      for (i = 0; i < array.length; i++){
+        if (array[i] > largest){
+          largest = array[i];
+        }
+      }
+      return largest;
+    };
+      </xmp>
+    </code>
+  </div>
+</div>

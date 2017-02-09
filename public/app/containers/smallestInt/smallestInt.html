@@ -10,3 +10,26 @@
 
 <h3 ng-show="smallestIntComp.answer">Smallest integer:</h3>
 <div class="answer">{{smallestIntComp.answer}}</div>
+
+<hr />
+
+<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#codeContent" aria-expanded="false" aria-controls="codeContent">
+  Show Code
+</button>
+<div class="collapse" id="codeContent">
+  <div class="well code-content">
+    <code>
+      <xmp>
+    function smallestInt(array){
+      var smallest = array[0];
+      for (i = 0; i < array.length; i++){
+        if (array[i] < smallest){
+          smallest = array[i];
+        }
+      }
+      return smallest;
+    };
+      </xmp>
+    </code>
+  </div>
+</div>
