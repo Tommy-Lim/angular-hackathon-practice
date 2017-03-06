@@ -15,19 +15,23 @@ function SelectionSortCompCtrl(DataServices){
   selectionSortComp.calculate = function(){
 
     function selectionSort(a){
-      for(var i = 0; i < a.length; i++){
-        var minVal = a[i];
-        var index = i;
-        for(var j = i+1; j < a.length; j++){
-          if(a[j] < minVal){
-            index = j;
-            minVal = a[j];
+      if(a && a.length > 1){
+        for(var i = 0; i < a.length; i++){
+          var minVal = a[i];
+          var index = i;
+          for(var j = i+1; j < a.length; j++){
+            if(a[j] < minVal){
+              index = j;
+              minVal = a[j];
+            }
           }
+          a[index] = a[i];
+          a[i] = minVal;
         }
-        a[index] = a[i];
-        a[i] = minVal;
+        return a;
+      } else{
+        return a;
       }
-      return a;
     };
 
 

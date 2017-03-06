@@ -15,16 +15,20 @@ function InsertionSortCompCtrl(DataServices){
   insertionSortComp.calculate = function(){
 
     function insertionSort(a){
-      for(var i = 1; i < a.length; i++){
-        var index = i;
-        while(a[index] < a[index-1]){
-          var temp = a[index];
-          a[index] = a[index-1];
-          a[index-1] = temp;
-          index -=1;
+      if(a && a.length >1){
+        for(var i = 1; i < a.length; i++){
+          var index = i;
+          while(a[index] < a[index-1]){
+            var temp = a[index];
+            a[index] = a[index-1];
+            a[index-1] = temp;
+            index -=1;
+          }
         }
+        return a;
+      } else{
+        return a;
       }
-      return a;
     };
 
 

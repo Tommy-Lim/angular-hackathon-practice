@@ -15,22 +15,26 @@ function BucketSortCompCtrl(DataServices){
   bucketSortComp.calculate = function(){
 
     function bucketSort(a){
-      var counts = [];
-      a.forEach(function(num){
-        if(!counts[num]){
-          counts[num] = 1;
-        } else{
-          counts[num] +=1;
+      if(a && a.length>1){
+        var counts = [];
+        a.forEach(function(num){
+          if(!counts[num]){
+            counts[num] = 1;
+          } else{
+            counts[num] +=1;
+          }
+        })
+        a = [];
+        for(i =0; i< counts.length; i++){
+          if(counts[i] > 0){
+            var numArray = Array(counts[i]).fill(i)
+            a = a.concat(numArray);
+          }
         }
-      })
-      a = [];
-      for(i =0; i< counts.length; i++){
-        if(counts[i] > 0){
-          var numArray = Array(counts[i]).fill(i)
-          a = a.concat(numArray);
-        }
+        return a;
+      } else{
+        return a;
       }
-      return a;
     };
 
 

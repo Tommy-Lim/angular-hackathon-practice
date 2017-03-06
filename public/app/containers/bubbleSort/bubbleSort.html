@@ -21,22 +21,26 @@
     <code>
       <xmp>
     function bubbleSort(a){
-      var sorting = true;
-      while(sorting){
-        var swaps = 0;
-        for(var i = 1; i <= a.length; i++){
-          if(a[i] < a[i-1]){
-            swaps += 1;
-            temp = a[i];
-            a[i] = a[i-1];
-            a[i-1] = temp;
-          }
-          if(i == a.length-1 && swaps==0){
-            sorting = false;
+      if(a && a.length>1){
+        var sorting = true;
+        while(sorting){
+          var swaps = 0;
+          for(var i = 1; i <= a.length; i++){
+            if(a[i] < a[i-1]){
+              swaps += 1;
+              temp = a[i];
+              a[i] = a[i-1];
+              a[i-1] = temp;
+            }
+            if(i == a.length-1 && swaps==0){
+              sorting = false;
+            }
           }
         }
+        return a;
+      } else{
+        return a
       }
-      return a;
     };
       </xmp>
     </code>
