@@ -42,7 +42,7 @@ function MergeTwoSortedCompCtrl(DataServices){
         i2++;
       }
 
-      return "["+results.join(", ")+"]";
+      return "[ "+results.join(", ")+" ]";
     }
 
     mergeTwoSortedComp.answer = merge(a1, a2);

@@ -35,6 +35,9 @@ function DataServices(){
       "mergeTwoSorted",
       "minimumDifference",
       "calculator",
+      "bubbleSort",
+      "bucketSort",
+      "insertionSort",
     ]
 
   }

@@ -1,0 +1,44 @@
+<h2>Insertion Sort</h2>
+<br />
+
+<form ng-submit="insertionSortComp.calculate()">
+  <div class="form-group">
+    <label for="input">Space delimited list of integers:</label>
+    <input class="form-control" name="input" ng-model="insertionSortComp.input" ng-change="insertionSortComp.calculate()" autofocus/>
+  </div>
+</form>
+
+<h3 ng-show="insertionSortComp.answer">Sorted list of integers:</h3>
+<div class="answer">[ <span ng-repeat="val in insertionSortComp.answer track by $index">{{val}}<span ng-if="$index<insertionSortComp.answer.length-1">, </span></span> ]</div>
+
+<hr />
+
+<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#codeContent" aria-expanded="false" aria-controls="codeContent">
+  Show Code
+</button>
+<div class="collapse" id="codeContent">
+  <div class="well code-content">
+    <code>
+      <xmp>
+    function bbubble(a){
+      var sorting = true;
+      while(sorting){
+        var swaps = 0;
+        for(var i = 1; i <= a.length; i++){
+          if(a[i] < a[i-1]){
+            swaps += 1;
+            temp = a[i];
+            a[i] = a[i-1];
+            a[i-1] = temp;
+          }
+          if(i == a.length-1 && swaps==0){
+            sorting = false;
+          }
+        }
+      }
+      return a;
+    };
+      </xmp>
+    </code>
+  </div>
+</div>

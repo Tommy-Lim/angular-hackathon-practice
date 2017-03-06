@@ -51,6 +51,18 @@ angular.module('App', ['ui.router'])
       url: '/reverseOrder',
       component: 'reverseOrderComp'
     })
+    .state('bubbleSortState', {
+      url: '/bubbleSort',
+      component: 'bubbleSortComp'
+    })
+    .state('bucketSortState', {
+      url: '/bucketSort',
+      component: 'bucketSortComp'
+    })
+    .state('insertionSortState', {
+      url: '/insertionSort',
+      component: 'insertionSortComp'
+    })
 
     $locationProvider.html5Mode(true);
 
