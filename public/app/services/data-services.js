@@ -37,7 +37,6 @@ function DataServices(){
       "reverseStr",
       "calculator",
       "reverseOrder",
-      "sort"
     ]
 
   }

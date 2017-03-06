@@ -23,7 +23,7 @@ function CalculatorCompCtrl(){
         calculatorComp.firstArg = "" + num;
         calculatorComp.calcString = calculatorComp.firstArg;
       } else{
-        calculatorComp.firstArg = calculatorComp.firstArg + num;
+        calculatorComp.firstArg = num;
         calculatorComp.calcString = calculatorComp.firstArg;
       }
     } else if(calculatorComp.onSecondArg){
