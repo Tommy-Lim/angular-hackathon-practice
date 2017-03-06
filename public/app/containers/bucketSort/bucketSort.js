@@ -1,7 +1,7 @@
 angular.module('App')
 .component('bucketSortComp', {
   templateUrl: 'app/containers/bucketSort/bucketSort.html',
-  controller: BubbleSortCompCtrl,
+  controller: BucketSortCompCtrl,
   controllerAs: 'bucketSortComp'
 });
 
@@ -9,34 +9,27 @@ function BucketSortCompCtrl(DataServices){
   $("input").focus();
 
   var bucketSortComp = this;
-  bucketSortComp.input = "3 5 7 9";
+  bucketSortComp.input = "3 5 2 1 7 3";
   bucketSortComp.answer = null;
 
   bucketSortComp.calculate = function(){
 
     function bucketSort(a){
-      var maxx = a[0];
+      var counts = [];
       a.forEach(function(num){
-        if(num > maxx){
-          maxx = num;
-        }
-      });
-      arr = new Array(maxx + 1);
-      a.forEach(function(num){
-        if(!arr[num]){
-          arr[num] = 1;
+        if(!counts[num]){
+          counts[num] = 1;
         } else{
-          arr[num]++;
+          counts[num] +=1;
         }
       })
       a = [];
-      arr.forEach(function(num, index){
-        if(num > 0){
-          for(var i = 0; i<arr[num]; i++){
-            a = a.concat([index])
-          }
+      for(i =0; i< counts.length; i++){
+        if(counts[i] > 0){
+          var numArray = Array(counts[i]).fill(i)
+          a = a.concat(numArray);
         }
-      })
+      }
       return a;
     };
 

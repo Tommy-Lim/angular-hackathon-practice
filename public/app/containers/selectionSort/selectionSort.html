@@ -1,0 +1,41 @@
+<h2>Selection Sort</h2>
+<br />
+
+<form ng-submit="selectionSortComp.calculate()">
+  <div class="form-group">
+    <label for="input">Space delimited list of integers:</label>
+    <input class="form-control" name="input" ng-model="selectionSortComp.input" ng-change="selectionSortComp.calculate()" autofocus/>
+  </div>
+</form>
+
+<h3 ng-show="selectionSortComp.answer">Sorted list of integers:</h3>
+<div class="answer">[ <span ng-repeat="val in selectionSortComp.answer track by $index">{{val}}<span ng-if="$index<selectionSortComp.answer.length-1">, </span></span> ]</div>
+
+<hr />
+
+<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#codeContent" aria-expanded="false" aria-controls="codeContent">
+  Show Code
+</button>
+<div class="collapse" id="codeContent">
+  <div class="well code-content">
+    <code>
+      <xmp>
+    function selectionSort(a){
+      for(var i = 0; i < a.length; i++){
+        var minVal = a[i];
+        var index = i;
+        for(var j = i+1; j < a.length; j++){
+          if(a[j] < minVal){
+            index = j;
+            minVal = a[j];
+          }
+        }
+        a[index] = a[i];
+        a[i] = minVal;
+      }
+      return a;
+    };
+      </xmp>
+    </code>
+  </div>
+</div>

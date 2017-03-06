@@ -9,23 +9,20 @@ function InsertionSortCompCtrl(DataServices){
   $("input").focus();
 
   var insertionSortComp = this;
-  insertionSortComp.input = "3 5 7 9";
+  insertionSortComp.input = "8 5 7 1 9 3";
   insertionSortComp.answer = null;
 
   insertionSortComp.calculate = function(){
 
     function insertionSort(a){
-      for(var i = 0; i < a.length; i++){
-        var minVal = a[i];
+      for(var i = 1; i < a.length; i++){
         var index = i;
-        for(var j = i+1; j < a.length; j++){
-          if(a[j] < minVal){
-            index = j;
-            minVal = a[j];
-          }
+        while(a[index] < a[index-1]){
+          var temp = a[index];
+          a[index] = a[index-1];
+          a[index-1] = temp;
+          index -=1;
         }
-        a[index] = a[i];
-        a[i] = minVal;
       }
       return a;
     };

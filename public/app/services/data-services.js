@@ -37,6 +37,7 @@ function DataServices(){
       "calculator",
       "bubbleSort",
       "bucketSort",
+      "selectionSort",
       "insertionSort",
     ]
 

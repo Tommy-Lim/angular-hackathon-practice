@@ -59,6 +59,10 @@ angular.module('App', ['ui.router'])
       url: '/bucketSort',
       component: 'bucketSortComp'
     })
+    .state('selectionSortState', {
+      url: '/selectionSort',
+      component: 'selectionSortComp'
+    })
     .state('insertionSortState', {
       url: '/insertionSort',
       component: 'insertionSortComp'

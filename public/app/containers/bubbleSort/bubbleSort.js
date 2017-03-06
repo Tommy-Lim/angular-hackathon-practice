@@ -9,7 +9,7 @@ function BubbleSortCompCtrl(DataServices){
   $("input").focus();
 
   var bubbleSortComp = this;
-  bubbleSortComp.input = "3 5 7 9";
+  bubbleSortComp.input = "3 5 4 3 7";
   bubbleSortComp.answer = null;
 
   bubbleSortComp.calculate = function(){

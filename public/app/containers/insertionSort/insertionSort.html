@@ -20,20 +20,14 @@
   <div class="well code-content">
     <code>
       <xmp>
-    function bbubble(a){
-      var sorting = true;
-      while(sorting){
-        var swaps = 0;
-        for(var i = 1; i <= a.length; i++){
-          if(a[i] < a[i-1]){
-            swaps += 1;
-            temp = a[i];
-            a[i] = a[i-1];
-            a[i-1] = temp;
-          }
-          if(i == a.length-1 && swaps==0){
-            sorting = false;
-          }
+    function insertionSort(a){
+      for(var i = 1; i < a.length; i++){
+        var index = i;
+        while(a[index] < a[index-1]){
+          var temp = a[index];
+          a[index] = a[index-1];
+          a[index-1] = temp;
+          index -=1;
         }
       }
       return a;
