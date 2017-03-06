@@ -1,0 +1,27 @@
+<h2>Merge Sort</h2>
+<br />
+
+<form ng-submit="mergeSortComp.calculate()">
+  <div class="form-group">
+    <label for="input">Space delimited list of integers:</label>
+    <input class="form-control" name="input" ng-model="mergeSortComp.input" ng-change="mergeSortComp.calculate()" autofocus/>
+  </div>
+</form>
+
+<h3 ng-show="mergeSortComp.answer">Sorted list of integers:</h3>
+<div class="answer">[ <span ng-repeat="val in mergeSortComp.answer track by $index">{{val}}<span ng-if="$index<mergeSortComp.answer.length-1">, </span></span> ]</div>
+
+<hr />
+
+<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#codeContent" aria-expanded="false" aria-controls="codeContent">
+  Show Code
+</button>
+<div class="collapse" id="codeContent">
+  <div class="well code-content">
+    <code>
+      <xmp>
+    
+      </xmp>
+    </code>
+  </div>
+</div>

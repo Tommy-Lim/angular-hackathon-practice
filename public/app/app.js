@@ -67,6 +67,10 @@ angular.module('App', ['ui.router'])
       url: '/insertionSort',
       component: 'insertionSortComp'
     })
+    .state('mergeSortState', {
+      url: '/mergeSort',
+      component: 'mergeSortComp'
+    })
 
     $locationProvider.html5Mode(true);
 
