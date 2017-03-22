@@ -47,10 +47,6 @@ angular.module('App', ['ui.router'])
       url: '/calculator',
       component: 'calculatorComp'
     })
-    .state('reverseOrderState', {
-      url: '/reverseOrder',
-      component: 'reverseOrderComp'
-    })
     .state('bubbleSortState', {
       url: '/bubbleSort',
       component: 'bubbleSortComp'

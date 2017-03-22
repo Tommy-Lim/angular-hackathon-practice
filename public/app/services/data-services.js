@@ -39,7 +39,8 @@ function DataServices(){
       "bucketSort",
       "selectionSort",
       "insertionSort",
-      "mergeSort"
+      "mergeSort",
+      "reverseStr"
     ]
 
   }

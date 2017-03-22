@@ -1,0 +1,33 @@
+<h2>Reverse String</h2>
+<br />
+
+<form ng-submit="reverseStrComp.calculate()">
+  <div class="form-group">
+    <label for="input">Space delimited list of integers:</label>
+    <input class="form-control" name="input" ng-model="reverseStrComp.input" ng-change="reverseStrComp.calculate()" autofocus/>
+  </div>
+</form>
+
+<h3 ng-show="reverseStrComp.answer">Smallest integer:</h3>
+<div class="answer">{{reverseStrComp.answer}}</div>
+
+<hr />
+
+<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#codeContent" aria-expanded="false" aria-controls="codeContent">
+  Show Code
+</button>
+<div class="collapse" id="codeContent">
+  <div class="well code-content">
+    <code>
+      <xmp>
+    function reverseStr(str){
+      if(str.length<2){
+        return str;
+      } else{
+        return reverseStr(str.substring(1)) + str.charAt(0);
+      }
+    };
+      </xmp>
+    </code>
+  </div>
+</div>
