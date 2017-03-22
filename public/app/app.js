@@ -67,6 +67,10 @@ angular.module('App', ['ui.router'])
       url: '/mergeSort',
       component: 'mergeSortComp'
     })
+    .state('isPalindromeState', {
+      url: '/isPalindrome',
+      component: 'isPalindromeComp'
+    })
 
     $locationProvider.html5Mode(true);
 

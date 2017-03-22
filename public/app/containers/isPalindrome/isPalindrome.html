@@ -1,0 +1,36 @@
+<h2>Check if String is Palindrome</h2>
+<br />
+
+<form ng-submit="isPalindromeComp.calculate()">
+  <div class="form-group">
+    <label for="input">Input String:</label>
+    <input class="form-control" name="input" ng-model="isPalindromeComp.input" ng-change="isPalindromeComp.calculate()" autofocus/>
+  </div>
+</form>
+
+<h3 ng-show="isPalindromeComp.answer != null">True or False:</h3>
+<div class="answer">{{isPalindromeComp.answer}}</div>
+
+<hr />
+
+<button class="btn btn-default" type="button" data-toggle="collapse" data-target="#codeContent" aria-expanded="false" aria-controls="codeContent">
+  Show Code
+</button>
+<div class="collapse" id="codeContent">
+  <div class="well code-content">
+    <code>
+      <xmp>
+    function isPalindrome(str){
+      if(str.length<2){
+        return true
+      } else if(str.charAt(0) != str.charAt(str.length-1)){
+        return false
+      } else{
+        var middle = str.substring(1,str.length-1);
+        return isPalindrome(middle);
+      }
+    }
+      </xmp>
+    </code>
+  </div>
+</div>

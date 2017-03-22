@@ -3,12 +3,12 @@
 
 <form ng-submit="reverseStrComp.calculate()">
   <div class="form-group">
-    <label for="input">Space delimited list of integers:</label>
+    <label for="input">Input String:</label>
     <input class="form-control" name="input" ng-model="reverseStrComp.input" ng-change="reverseStrComp.calculate()" autofocus/>
   </div>
 </form>
 
-<h3 ng-show="reverseStrComp.answer">Smallest integer:</h3>
+<h3 ng-show="reverseStrComp.answer">Reversed String:</h3>
 <div class="answer">{{reverseStrComp.answer}}</div>
 
 <hr />

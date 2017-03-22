@@ -40,7 +40,8 @@ function DataServices(){
       "selectionSort",
       "insertionSort",
       "mergeSort",
-      "reverseStr"
+      "reverseStr",
+      "isPalindrome"
     ]
 
   }
